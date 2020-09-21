@@ -3,13 +3,15 @@
 
 const filterArray = function(arr) {
 
-}
+    return arr.filter(elem => elem >= 0 && typeof(elem) !== 'string');
 
-//filterArray([1, 2, "a", "b"]) 
+};
+
+console.log(filterArray([1, 2, "a", "b", -1]));
 // ➞ [1, 2]
 
-//filterArray([1, "a", "b", 0, 15]) 
+console.log(filterArray([1, "a", "b", 0, 15]));
 // ➞ [1, 0, 15]
 
-//filterArray([1, 2, "aasf", "1", "123", 123]) 
+console.log(filterArray([1, 2, "aasf", "1", "123", 123]));
 //➞ [1, 2, 123]
